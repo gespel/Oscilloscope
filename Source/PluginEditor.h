@@ -24,5 +24,6 @@ private:
     void timerCallback() final {
         repaint();
     }
+    Image background = ImageCache::getFromMemory(BinaryData::oscilloscope_bg_png, BinaryData::oscilloscope_bg_pngSize);
     JUCE_DECLARE_NON_COPYABLE_WITH_LEAK_DETECTOR (OscilloscopeAudioProcessorEditor)
 };
