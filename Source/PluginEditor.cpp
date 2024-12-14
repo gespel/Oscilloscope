@@ -7,7 +7,7 @@ OscilloscopeAudioProcessorEditor::OscilloscopeAudioProcessorEditor (Oscilloscope
 {
 
     setSize (512, 406);
-    startTimer(100.0);
+    startTimer(50.0);
 }
 
 OscilloscopeAudioProcessorEditor::~OscilloscopeAudioProcessorEditor()
@@ -26,7 +26,7 @@ void OscilloscopeAudioProcessorEditor::paint (juce::Graphics& g)
         g.drawLine(i+19, (data[i]*800) + 185, i+20, (data[i+1]*800) + 185, 3);
     }
     g.setFont (juce::FontOptions (11.0f));
-    g.drawText("Made by Phi Labs", juce::Rectangle(10, 394, 100, 15), juce::Justification::centred);
+    g.drawText("Made by Phi Labs", juce::Rectangle(11, 308, 100, 15), juce::Justification::centred);
     //g.drawFittedText ("Made by Phi Labs", getLocalBounds(), juce::Justification::centredBottom, 1);
 }
 
