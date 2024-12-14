@@ -1,6 +1,7 @@
 
 
 #pragma once
+#define SAMPLE_WINDOW_SIZE 8192
 
 #include <JuceHeader.h>
 
@@ -53,5 +54,5 @@ private:
     JUCE_DECLARE_NON_COPYABLE_WITH_LEAK_DETECTOR (OscilloscopeAudioProcessor)
     int windowCounter = 0;
     bool writeWindow = false;
-    float window[512];
+    float window[SAMPLE_WINDOW_SIZE];
 };
