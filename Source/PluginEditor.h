@@ -7,6 +7,8 @@
 //==============================================================================
 /**
 */
+
+
 class OscilloscopeAudioProcessorEditor  : public juce::AudioProcessorEditor, private juce::Timer, public juce::Slider::Listener
 {
 public:
@@ -18,10 +20,13 @@ public:
     void resized() override;
     juce::Slider gain;
     juce::Slider windowSize;
+    juce::Label gainLabel;
+    juce::Label windowSizeLabel;
 
 private:
     int sample_increase = 1;
     double gain_value = 1;
+    double linearToDb(double linear);
     // This reference is provided as a quick way for your editor to
     // access the processor object that created it.
     OscilloscopeAudioProcessor& audioProcessor;

@@ -124,7 +124,7 @@ void OscilloscopeAudioProcessor::processBlock (juce::AudioBuffer<float>& buffer,
     
     for(int sample_index = 0; sample_index < buffer.getNumSamples(); sample_index++) {
         if(sample_index < SAMPLE_WINDOW_SIZE && writeWindow == true) {
-            window[sample_index] = (channelDataL[sample_index] + channelDataR[sample_index]) / 2;
+            window[sample_index] = (channelDataL[sample_index] + channelDataR[sample_index]) * (gain);
         }
     }
     writeWindow = false;
